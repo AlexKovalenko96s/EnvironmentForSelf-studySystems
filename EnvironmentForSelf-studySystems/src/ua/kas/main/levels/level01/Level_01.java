@@ -50,5 +50,5 @@ public class Level_01 {
 			179.0, 652.0, 410.0, 739.0, 377.0, 495.0, 374.0, 453.0, 458.0, 220.0, 466.0, 246.0, 558.0 };
 	public static double startCar2[] = { 174.0, 279.0 };
 	public static double startCar1[] = { 194.0, 310.0 };
-	public static ImageView levelGraphics = new ImageView(new Image(Level_01.class.getResourceAsStream("level01.png")));
+	public static ImageView levelGraphics = new ImageView(new Image(Level_01.class.getResourceAsStream("map1.png")));
 }

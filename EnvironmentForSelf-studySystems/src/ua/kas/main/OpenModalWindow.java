@@ -1,35 +1,39 @@
 package ua.kas.main;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class OpenModalWindow implements Runnable {
 
-	private ActionEvent event = null;
+	public static Stage stage;
 
-	public OpenModalWindow(ActionEvent event) {
-		this.event = event;
+	private int x, y;
+	private String title, fxmlPath;
+
+	public OpenModalWindow(int x, int y, String fxmlPath, String title) {
+		this.x = x;
+		this.y = y;
+		this.fxmlPath = fxmlPath;
+		this.title = title;
 		run();
 	}
 
 	public void showDialog() throws Exception {
-		Stage stage = new Stage();
-		Parent root = FXMLLoader.load(this.getClass().getResource("CreateNew.fxml"));
-		stage.setTitle("Create new scene");
+		stage = new Stage();
+		Parent root = FXMLLoader.load(this.getClass().getResource(fxmlPath));
+		stage.setTitle(title);
 		stage.setResizable(false);
-		Scene scene = new Scene(root, 400 - 10, 200 - 10);
-		stage.setScene(scene);
+		Scene scene = new Scene(root, x - 10, y - 10);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		stage.setScene(scene);
 		stage.initModality(Modality.WINDOW_MODAL);
-		stage.initOwner(((Node) event.getSource()).getScene().getWindow());
-		// stage.getIcons().add(new
-		// Image(this.getClass().getResourceAsStream("Compass-icon.png")));
+		stage.initOwner((Main.getWindow()).getScene().getWindow());
+		stage.getIcons().add(new Image(this.getClass().getResourceAsStream("neuralNetwork.png")));
 		stage.show();
 	}
 
@@ -46,5 +50,9 @@ public class OpenModalWindow implements Runnable {
 				}
 			}
 		});
+	}
+
+	public static Stage getStage() {
+		return stage;
 	}
 }
