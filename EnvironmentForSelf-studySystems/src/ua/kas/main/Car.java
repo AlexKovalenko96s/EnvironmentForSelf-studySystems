@@ -6,13 +6,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
-import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Polyline;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
 
 public class Car {
-	public Polygon up;
+	// public Polygon up;
 	double w = 35, h = 18;
 	public Rectangle graphics, graphicsUp;
 	public DoubleProperty locationX, locationY, locationXUP, locationYUP;
@@ -27,14 +26,14 @@ public class Car {
 		return graphics;
 	}
 
-	public Polygon getRec() {
-		return up;
-	}
+	// public Polygon getRec() {
+	// return up;
+	// }
 
 	Polyline bounds = new Polyline(38.0, 17.0, 38.0, 7.0, 33.0, 6.0, 31.0, 4.0, 30.0, 3.0, 6.0, 3.0, 5.0, 4.0, 3.0, 6.0,
 			0.0, 7.0, 0.0, 17.0, 3.0, 18.0, 5.0, 20.0, 6.0, 21.0, 30.0, 21.0, 31.0, 20.0, 33.0, 18.0);
-	Polyline boundsUp = new Polyline(22.0, 12.0, 42.0, 32.0, 49.0, 32.0, 68.0, 13.0, 68.0, 11.0, 49.0, -8.0, 42.0,
-			-8.0);
+	// Polyline boundsUp = new Polyline(22.0, 12.0, 42.0, 32.0, 49.0, 32.0,
+	// 68.0, 13.0, 68.0, 11.0, 49.0, -8.0, 42.0,-8.0);
 
 	public Car() {
 		graphicsImg = new ImageView(new Image(Controller.class.getResourceAsStream("car1.png")));
@@ -57,15 +56,15 @@ public class Car {
 		graphics.setWidth(w);
 		graphics.setHeight(h);
 
-		locationXUP = new SimpleDoubleProperty(0);
-		locationYUP = new SimpleDoubleProperty(0);
-		up = new Polygon(22.0, 12.0, 42.0, 32.0, 49.0, 32.0, 68.0, 13.0, 68.0, 11.0, 49.0, -8.0, 42.0, -8.0);
-		up.setStroke(Color.RED);
-		up.setRotationAxis(Rotate.Z_AXIS);
-		up.layoutXProperty().bind(locationX.add((w / 2)));
-		up.layoutYProperty().bind(locationY.multiply(-1).add((600 - w / 2)));
-		up.setFill(Color.TRANSPARENT);
-
+		// locationXUP = new SimpleDoubleProperty(0);
+		// locationYUP = new SimpleDoubleProperty(0);
+		// up = new Polygon(22.0, 12.0, 42.0, 32.0, 49.0, 32.0, 68.0, 13.0,
+		// 68.0, 11.0, 49.0, -8.0, 42.0, -8.0);
+		// up.setStroke(Color.RED);
+		// up.setRotationAxis(Rotate.Z_AXIS);
+		// up.layoutXProperty().bind(locationX.add((w / 2)));
+		// up.layoutYProperty().bind(locationY.multiply(-1).add((600 - w / 2)));
+		// up.setFill(Color.TRANSPARENT);
 	}
 
 	public void translateByVector(Vector v) {
@@ -93,7 +92,7 @@ public class Car {
 
 	public void setDirection(double angle) {
 		graphics.setRotate(180 - angle);
-		up.setRotate(graphics.getRotate());
+		// up.setRotate(graphics.getRotate());
 		direction = angle;
 	}
 
@@ -124,5 +123,17 @@ public class Car {
 
 	public void setFuel(double fuel) {
 		this.fuel = fuel;
+	}
+
+	public DoubleProperty getLocationX() {
+		return locationX;
+	}
+
+	public DoubleProperty getLocationY() {
+		return locationY;
+	}
+
+	public double getDirection() {
+		return direction;
 	}
 }

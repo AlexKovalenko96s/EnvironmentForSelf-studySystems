@@ -98,11 +98,16 @@ public class Controller implements Initializable {
 
 	private static double width = 800, height = 600;
 
-	public static String image = "";
-	public static String language = "";
-	public static String storage = "";
-	public static String languagePath = "";
-	public static String storagePatch = "";
+	private static String image = "";
+	private static String language = "";
+	private static String storage = "";
+	private static String languagePath = "";
+	private static String storagePatch = "";
+
+	private static String speedCoeff = "";
+	private static String fuelCoeff = "";
+	private static String blockCoeff = "";
+	private static String rotateCoeff = "";
 
 	private boolean pleaseSelectMap = false;
 	private boolean pleaseAddVariable = false;
@@ -172,7 +177,7 @@ public class Controller implements Initializable {
 					car.getGraphics().setFill(Color.MEDIUMPURPLE);
 
 					container.getChildren().addAll(car.getGraphicsImg());
-					container.getChildren().addAll(car.getRec());
+					// container.getChildren().addAll(car.getRec());
 
 					container.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
@@ -190,9 +195,9 @@ public class Controller implements Initializable {
 						}
 					});
 
-					tf_x.setText(Double.toString(Level_01.startCar1[0] - car.w));
-					tf_y.setText(Double.toString(height - Level_01.startCar1[1]));
-					tf_z.setText(Double.toString(20));
+					tf_x.setText((new DecimalFormat("#0.000").format(car.getLocationX().get())));
+					tf_y.setText((new DecimalFormat("#0.000").format(car.getLocationY().get())));
+					tf_z.setText(Double.toString(car.getDirection()));
 					tf_speed.setText(new DecimalFormat("#0.0").format(car.getSpeed() * 30));
 					tf_fuel.setText(new DecimalFormat("#0.0").format(car.fuel));
 
@@ -227,9 +232,9 @@ public class Controller implements Initializable {
 
 							checkForCollisions(car);
 
-							tf_x.setText(Double.toString(Level_01.startCar1[0] - car.w));
-							tf_y.setText(Double.toString(height - Level_01.startCar1[1]));
-							tf_z.setText(Double.toString(20));
+							tf_x.setText((new DecimalFormat("#0.000").format(car.getLocationX().get())));
+							tf_y.setText((new DecimalFormat("#0.000").format(car.getLocationY().get())));
+							tf_z.setText(Double.toString(car.getDirection()));
 							tf_speed.setText(new DecimalFormat("#0.0").format(car.getSpeed() * 30));
 							tf_fuel.setText(new DecimalFormat("#0.0").format(car.fuel));
 						}
@@ -246,6 +251,15 @@ public class Controller implements Initializable {
 
 	public void createNew() {
 		openModalWindow = new OpenModalWindow(475, 200, "CreateNew.fxml", "Create new scene");
+	}
+
+	public void author() {
+		// openModalWindow = new OpenModalWindow(350, 200, "Author.fxml",
+		// "Author");
+	}
+
+	public void login() {
+		openModalWindow = new OpenModalWindow(300, 200, "Login.fxml", "Login");
 	}
 
 	public void selectMap() {
@@ -360,5 +374,37 @@ public class Controller implements Initializable {
 
 	public static void setImage(String image) {
 		Controller.image = image;
+	}
+
+	public static String getSpeedCoeff() {
+		return speedCoeff;
+	}
+
+	public static void setSpeedCoeff(String speedCoeff) {
+		Controller.speedCoeff = speedCoeff;
+	}
+
+	public static String getFuelCoeff() {
+		return fuelCoeff;
+	}
+
+	public static void setFuelCoeff(String fuelCoeff) {
+		Controller.fuelCoeff = fuelCoeff;
+	}
+
+	public static String getBlockCoeff() {
+		return blockCoeff;
+	}
+
+	public static void setBlockCoeff(String blockCoeff) {
+		Controller.blockCoeff = blockCoeff;
+	}
+
+	public static String getRotateCoeff() {
+		return rotateCoeff;
+	}
+
+	public static void setRotateCoeff(String rotateCoeff) {
+		Controller.rotateCoeff = rotateCoeff;
 	}
 }

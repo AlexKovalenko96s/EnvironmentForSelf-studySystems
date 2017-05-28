@@ -31,9 +31,14 @@
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Login">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#login" text="Login" />
+              </items>
+            </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#author" text="About" />
             </items>
           </Menu>
         </menus>
@@ -148,7 +153,7 @@
                   <Font name="Times New Roman" size="12.0" />
                </font>
             </Label>
-            <Button focusTraversable="false" layoutX="14.0" layoutY="503.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="273.0" text="START">
+            <Button focusTraversable="false" layoutX="126.0" layoutY="503.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="161.0" text="START">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
@@ -170,6 +175,11 @@
             <ComboBox fx:id="cmb_fuel" focusTraversable="false" layoutX="196.0" layoutY="184.0" prefHeight="25.0" prefWidth="91.0" promptText="fuel" />
             <ComboBox fx:id="cmb_z" focusTraversable="false" layoutX="196.0" layoutY="95.0" prefHeight="25.0" prefWidth="91.0" promptText="z" />
             <ComboBox fx:id="cmb_bottom" focusTraversable="false" layoutX="196.0" layoutY="312.0" prefHeight="25.0" prefWidth="91.0" promptText="bottom" />
+            <Button focusTraversable="false" layoutX="21.0" layoutY="503.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="91.0" text="STOP">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="ancPane_mainPaine" layoutY="27.0" prefHeight="600.0" prefWidth="800.0" />

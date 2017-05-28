@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+   <children>
+      <Label layoutX="140.0" layoutY="20.0" text="Author" underline="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="125.0" fitWidth="132.0" layoutX="14.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Desktop/12121212121212.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="131.0" layoutY="61.0" prefHeight="28.0" prefWidth="175.0" text="Alex Kovalenko" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="140.0" layoutY="100.0" text="alex.kovalenko.s96@gmail.com" wrapText="true">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="119.0" layoutY="124.0" prefHeight="16.0" prefWidth="224.0" text="https://github.com/AlexKovalenko96s" textAlignment="RIGHT" wrapText="true">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

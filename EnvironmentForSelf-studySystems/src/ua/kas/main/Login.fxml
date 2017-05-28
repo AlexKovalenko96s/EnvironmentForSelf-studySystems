@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="ua.kas.main.ControllerLogin">
+   <children>
+      <Label layoutX="121.0" layoutY="20.0" text="Login">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="86.0" prefHeight="14.0" prefWidth="59.0" text="Enter email:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="120.0" prefHeight="17.0" prefWidth="78.0" text="Enter password:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="123.0" layoutY="154.0" mnemonicParsing="false" onAction="#checkUsers" prefHeight="32.0" prefWidth="149.0" text="Enter">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tf_email" layoutX="124.0" layoutY="81.0" promptText="email" />
+      <PasswordField fx:id="pf_password" layoutX="124.0" layoutY="116.0" promptText="password" />
+   </children>
+</AnchorPane>
