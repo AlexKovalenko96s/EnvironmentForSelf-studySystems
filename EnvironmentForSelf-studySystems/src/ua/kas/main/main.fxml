@@ -165,15 +165,15 @@
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Label>
-            <ComboBox fx:id="cmb_x" focusTraversable="false" layoutX="196.0" layoutY="15.0" prefHeight="25.0" prefWidth="91.0" promptText="x" />
-            <ComboBox fx:id="cmb_y" focusTraversable="false" layoutX="196.0" layoutY="55.0" prefHeight="25.0" prefWidth="91.0" promptText="y" />
+            <ComboBox fx:id="cmb_x" focusTraversable="false" layoutX="196.0" layoutY="15.0" prefHeight="25.0" prefWidth="91.0" promptText="d_x" />
+            <ComboBox fx:id="cmb_y" focusTraversable="false" layoutX="196.0" layoutY="55.0" prefHeight="25.0" prefWidth="91.0" promptText="d_y" />
             <ComboBox fx:id="cmb_right" focusTraversable="false" layoutX="196.0" layoutY="394.0" prefHeight="25.0" prefWidth="91.0" promptText="right" />
             <ComboBox fx:id="cmb_speed" focusTraversable="false" layoutX="196.0" layoutY="141.0" prefHeight="25.0" prefWidth="91.0" promptText="speed" />
             <ComboBox fx:id="cmb_left" focusTraversable="false" layoutX="196.0" layoutY="355.0" prefHeight="25.0" prefWidth="91.0" promptText="left" />
             <ComboBox fx:id="cmb_accident" focusTraversable="false" layoutX="95.0" layoutY="447.0" prefHeight="25.0" prefWidth="192.0" />
-            <ComboBox fx:id="cmb_top" focusTraversable="false" layoutX="196.0" layoutY="272.0" prefHeight="25.0" prefWidth="91.0" promptText="top" />
+            <ComboBox fx:id="cmb_top" focusTraversable="false" layoutX="196.0" layoutY="272.0" prefHeight="25.0" prefWidth="91.0" promptText="d_topBlock" />
             <ComboBox fx:id="cmb_fuel" focusTraversable="false" layoutX="196.0" layoutY="184.0" prefHeight="25.0" prefWidth="91.0" promptText="fuel" />
-            <ComboBox fx:id="cmb_z" focusTraversable="false" layoutX="196.0" layoutY="95.0" prefHeight="25.0" prefWidth="91.0" promptText="z" />
+            <ComboBox fx:id="cmb_z" focusTraversable="false" layoutX="196.0" layoutY="95.0" prefHeight="25.0" prefWidth="91.0" promptText="d_z" />
             <ComboBox fx:id="cmb_bottom" focusTraversable="false" layoutX="196.0" layoutY="312.0" prefHeight="25.0" prefWidth="91.0" promptText="bottom" />
             <Button focusTraversable="false" layoutX="21.0" layoutY="503.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="91.0" text="STOP">
                <font>
