@@ -173,7 +173,7 @@ public class Controller implements Initializable {
 
 					car = new Car();
 					car.setLocationByVector(Level_01.startCar1[0] - car.w, height - Level_01.startCar1[1]);
-					car.setDirection(40);
+					car.setDirection(20);
 					car.getGraphics().setFill(Color.MEDIUMPURPLE);
 
 					container.getChildren().addAll(car.getGraphicsImg());

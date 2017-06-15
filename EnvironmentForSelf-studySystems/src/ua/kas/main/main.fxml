@@ -56,7 +56,7 @@
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="27.0" layoutY="98.0" text="Select Z:">
+            <Label layoutX="9.0" layoutY="99.0" text="Select incline:">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -173,7 +173,7 @@
             <ComboBox fx:id="cmb_accident" focusTraversable="false" layoutX="95.0" layoutY="447.0" prefHeight="25.0" prefWidth="192.0" />
             <ComboBox fx:id="cmb_top" focusTraversable="false" layoutX="196.0" layoutY="272.0" prefHeight="25.0" prefWidth="91.0" promptText="d_topBlock" />
             <ComboBox fx:id="cmb_fuel" focusTraversable="false" layoutX="196.0" layoutY="184.0" prefHeight="25.0" prefWidth="91.0" promptText="fuel" />
-            <ComboBox fx:id="cmb_z" focusTraversable="false" layoutX="196.0" layoutY="95.0" prefHeight="25.0" prefWidth="91.0" promptText="d_z" />
+            <ComboBox fx:id="cmb_z" focusTraversable="false" layoutX="196.0" layoutY="95.0" prefHeight="25.0" prefWidth="91.0" promptText="d_incline" />
             <ComboBox fx:id="cmb_bottom" focusTraversable="false" layoutX="196.0" layoutY="312.0" prefHeight="25.0" prefWidth="91.0" promptText="bottom" />
             <Button focusTraversable="false" layoutX="21.0" layoutY="503.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="91.0" text="STOP">
                <font>
