@@ -158,7 +158,7 @@ public class Controller implements Initializable {
 					Rectangle r = new Rectangle(width, height);
 					r.setFill(Color.WHITE);
 					r.setOpacity(0.6);
-					container.getChildren().addAll(r);
+					// container.getChildren().addAll(r);
 					Text t = new Text("Please, select needed variables!");
 					ProgressIndicator p = new ProgressIndicator();
 
@@ -168,7 +168,7 @@ public class Controller implements Initializable {
 					t.setY(height / 2);
 					t.setFont(Font.font(Font.getDefault().getName(), FontWeight.BOLD, 17));
 					t.setFill(new Color(107 / 255.0, 162 / 255.0, 252 / 255.0, 1.0));
-					container.getChildren().addAll(t, p);
+					// container.getChildren().addAll(t, p);
 					loop.stop();
 
 					car = new Car();
